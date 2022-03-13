@@ -96,7 +96,6 @@ PyMsgBox==1.0.9
 pyOpenSSL==22.0.0
 pyparsing==2.4.7
 pyperclip==1.8.2
-pypiwin32==223;platform_system == "Windows"
 pypng==0.0.20
 PyQRCode==1.2.1
 PyRect==0.1.4
@@ -108,8 +107,6 @@ pyttsx3==2.90
 PyTweening==1.0.3
 pytz==2021.1
 pywhatkit==3.9
-pywin32==300;platform_system == "Windows"
-pywin32-ctypes==0.2.0;platform_system == "Windows"
 PyYAML==5.4.1
 queuelib==1.6.2
 requests==2.25.1
