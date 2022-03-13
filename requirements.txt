@@ -133,7 +133,6 @@ torchvision==0.9.1
 tqdm==4.60.0
 twilio==6.53.0
 Twisted==22.1.0
-twisted-iocpsupport==1.0.2
 typer==0.3.2
 typing-extensions==3.7.4.3
 ujson==4.3.0
