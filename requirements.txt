@@ -128,8 +128,6 @@ starlette==0.17.1
 thinc==8.0.3
 threadpoolctl==2.1.0
 tldextract==3.2.0
-torch==1.8.1
-torchvision==0.9.1
 tqdm==4.60.0
 twilio==6.53.0
 Twisted==22.1.0
