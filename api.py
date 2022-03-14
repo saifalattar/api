@@ -47,6 +47,20 @@ def add_to_cart(user, data: dict = Body(...)):
     else:
         return "User can't found"
 
+    
+page = None
+
+
+@api.get("/custom/{name}", response_class=HTMLResponse)
+def custom():
+    return page
+
+@api.post("/custom", response_class=HTMLResponse)
+def pCustom(request: Request, data: str = Body(...)):
+    page = template.TemplateResponse("index.html", context={"request": request, "name":data})
+
+    return page
+    
 
 @api.get("/user/{user}/cart")
 def getCart(user):
