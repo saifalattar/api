@@ -20,7 +20,9 @@ class User(pydantic.BaseModel):
     name: str
     id: Optional[int] = 0
     
-    
+@api.get("/")
+def firstPage():
+    return {"welcome":"Welcome page"}
 
 
 @api.post("/users")
