@@ -12,9 +12,6 @@ api = FastAPI()
 users = []
 ids = []
 
-database = pymongo.MongoClient("mongodb+srv://saifelbob2002:huhqow-mekdeg-Nizhu2@cluster0.40yph.mongodb.net/oyp?retryWrites=true&w=majority")
-
-
 class User(pydantic.BaseModel):
     age: int
     name: str
