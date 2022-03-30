@@ -34,6 +34,33 @@ def allUsers(password: dict = Body(...)):
     else: 
         return {"AuthError": "Sorry you don't have access"}
 
+    
+@api.post("/SendEmail")
+def sendWelcome(email: dict = Body(...)):
+
+    message = MIMEMultipart()
+
+    message.add_header("From", "OYP Co.")
+    message.add_header("To", "you")
+    message.add_header("Subject", "Test email")
+    message.attach(MIMEText("<h1>Saif</h1>", "html"))
+
+    part = MIMEBase('application', "octet-stream")
+
+    part.set_payload(open(email['file'], "rb").read())
+    em.encoders.encode_base64(part)
+
+    part.add_header('Content-Disposition', 'attachment; filename="{}"'.format(email['file']))
+
+    message.attach(part)
+    server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+    server.ehlo()
+    server.login("orderyourprogram.business@gmail.com", "Saif@2002OYP")
+    server.sendmail("said",email["email"], message.as_string())
+    print("Email sent")
+    return True
+
+
 
 @api.get("/users")
 def gett():
